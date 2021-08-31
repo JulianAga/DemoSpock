@@ -26,6 +26,10 @@ public class MovieService {
         this.movieRepository = movieRepository;
     }
 
+    public MovieService() {
+
+    }
+
     public Movie findById(Integer id) throws Exception {
         return this.movieRepository.findById(id)
                 .orElseThrow(Exception::new);

@@ -20,11 +20,11 @@ class MovieControllerTest extends Specification {
 
     }
 
-    def ""() {
+    def "should throw an exception when saving a movie"() {
         //setup:
 
         when:
-        ResponseEntity<String> responseEntity = movieCatalogController.saveMovie(21);
+        def responseEntity = movieCatalogController.saveMovie(21);
 
         then:
         JsonProcessingException ex = thrown()
